@@ -74,8 +74,15 @@ Answer: 172.16.16.101 <br />
 - click any HTTP packets that has the usual client protocol use in the info, like "GET" --> Go to Internet Protocol Version to find the address  <br />
 ![5.4](images/5.4.png)<br />
 
-
-
+## Preblem 6
+### Did you find the fake flage?
+Answer: FakeFlag{JarkomGampang} <br />
+- in filter, type: 'frame contains "flag"' (packets where the raw packet data (the entire frame) contains the string "flag"), then right click the HTTP protocol one --> click follow --> TCP/HTTP stream --> find keyword like "FakeFlag" <br />
+![6.1](images/6.1.png)<br />
+### Write the written username and password!
+Answer: Rey:123 <br />
+- From the TCP/HTTP strem in 6.1 we know that there is no user or password displayed, however there is a passwd.txt file being shared. So by downloading the file, we can know the hidden string that are not fisible in the network <br />
+![6.2](images/6.2.png)<br />
 
 ## Preblem 7
 ### What is the image that is being requested by the client?
