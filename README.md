@@ -41,3 +41,19 @@ Answer: joyvan <br />
 Answer: 123 <br />
 - Still in the same TCP stream as number 3.2, try to find a word after "password:" <br />
 ![3.4](images/3.4.png)<br />
+
+## Preblem 4
+### What is the first command that the client wrote on telnet connection?
+Answer: echo <br />
+- Still in the same TCP stream as number 3.2, try to find any command word in programming <br />
+![4.1](images/4.1.png)<br />
+### What is the name of .txt file on the server?
+Answer: test.txt <br />
+- Still in the same TCP stream as number 3.2, try to find any .txt written <br />
+![4.2](images/4.2.png)<br />
+### What is the first word that the client inserted into the previous file?
+Answer: Jarkom <br />
+- Still in the same TCP stream as number 3.2, try to find a word after "echo" <br />
+![4.3](images/4.3.png)<br />
+
+
