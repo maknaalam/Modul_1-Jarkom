@@ -97,3 +97,20 @@ Answer: LIST <br />
 - Still in the same TCP stream as 8.2, find any information that provide "transfer" word in it, since it is a sent request. And for the word that come before it should be the command behind it <br />
 ![8.3](images/8.3.png)<br />
 
+
+
+
+
+## Preblem 10
+### What is the filename that contains encoded string?
+Answer: secret.txt <br />
+- click File menu --> go to export object --> choose ftp-data and you'll see all the file, which to contain string ususally located in .txt file <br />
+![10.1](images/10.1.png)<br />
+### What is the filename of the previous file copy?
+Answer: secret1.txt <br />
+- Still the same export ofject for ftp-data as 10.1. To find copied filename, usualy has the same extension and the base name is the same but with additional letter <br />
+![10.2](images/10.2.png)<br />
+### What is the decoded string from previous file?
+Answer: Pada suatu hari Rey bertemu dengan Nailong the Milk Dragon. Ketika bertemu, Rey mengajarkan Nailong apa itu Jaringan Komputer. Nailong pun senang karena ternyata Jaringan Komputer itu gampang. <br />
+- We save the object of the answer in 10.1, then open the file to copy the encoded string. Next we try to decode with every decoding methode out on public, and for the most common one is Base64  <br />
+![10.3](images/10.3.png)<br />
