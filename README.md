@@ -67,4 +67,17 @@ Answer: donalbebek.jpg <br />
 - click File menu --> go to export object --> choose http --> search for any extention for image which jpg is one of them <br />
 ![7](images/7.png)<br />
 
+## Preblem 8
+### How many FTP packets are recorded in the pcapng file?
+Answer: 81 <br />
+- in filter, type: "ftp or ftp-data", then see the displayed packets <br />
+![8.1](images/8.1.png)<br />
+### What is the client's username and password in the FTP connection?
+Answer: rey:password123lingangu <br />
+- after the filter in 8.1, choose any of the packets --> click follow --> TCP stream --> find keyword like "user" and "pass" <br />
+![8.2](images/8.2.png)<br />
+### What is the client's command for showing server directory that was sent on request packet?
+Answer: LIST <br />
+- Still in the same TCP stream as 8.2, find any information that provide "transfer" word in it, since it is a sent request. And for the word that come before it should be the command behind it <br />
+![8.3](images/8.3.png)<br />
 
