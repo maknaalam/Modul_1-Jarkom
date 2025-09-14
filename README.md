@@ -123,7 +123,7 @@ Answer: 172.16.16.101 <br />
 ![9.1](images/9.1.png)<br />
 ### How many files are there inside the FTP server-directory?
 Answer: 7 <br />
-- HNT: There is a specific protocol for sending data in FTP. Which Statistic menu --> protocol hierarchy --> the number of end packets from the protocol under FTP Data<br />
+- HINT: There is a specific protocol for sending data in FTP. Which Statistic menu --> protocol hierarchy --> the number of end packets from the protocol under FTP Data<br />
 ![9.2](images/9.2.png)<br />
 ### What are the filenames used in the page.html?
 Answer: pokijan.jpg,research_center.jpg <br />
