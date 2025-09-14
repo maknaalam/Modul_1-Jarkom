@@ -11,7 +11,7 @@ Answer: 9596 <br />
 ![1.1](images/1.1.png)<br />
 ### How many types of protocol (totals) are recorded in the traffic?
 Answer: 12 <br />
-- Statictic menu --> protocol hierarchy --> count each row <br />
+- Statistic menu --> protocol hierarchy --> count each row <br />
 ![1.2](images/1.2.png)<br />
 ### How many types ofTCP-based applications protocol are recorded in the traffic?
 Answer: 8 <br />
@@ -104,8 +104,19 @@ Answer: LIST <br />
 - Still in the same TCP stream as 8.2, find any information that provide "transfer" word in it, since it is a sent request. And for the word that come before it should be the command behind it <br />
 ![8.3](images/8.3.png)<br />
 
-
-
+## Preblem 9
+### What s the FTP serer IP address?
+Answer: 172.16.16.101 <br />
+- any ftp protocol source address that has the info says "Response: " <br />
+![9.1](images/9.1.png)<br />
+### How many files are there inside the FTP server-directory?
+Answer: 7 <br />
+- HNT: There is a specific protocol for sending data in FTP. Which Statistic menu --> protocol hierarchy --> the number of end packets from the protocol under FTP Data<br />
+![9.2](images/9.2.png)<br />
+### What are the filenames used in the page.html?
+Answer: pokijan.jpg,research_center.jpg <br />
+- click any of the tcp packets --> click follow --> TCP stream --> find keyword of ".html" and then you'll see Entering extended passive mode (|||37007|), which 37007 is the port of it. than we use in the filter "tcp.port == 37007" --> choose any of the packets --> click follow --> TCP stream --> find any file that has an extension <br />
+![9.3](images/9.3.png)<br />
 
 
 ## Preblem 10
