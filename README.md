@@ -57,3 +57,14 @@ Answer: Jarkom <br />
 ![4.3](images/4.3.png)<br />
 
 
+
+
+
+
+## Preblem 7
+### What is the image that is being requested by the client?
+Answer: donalbebek.jpg <br />
+- click File menu --> go to export object --> choose http --> search for any extention for image which jpg is one of them <br />
+![7](images/7.png)<br />
+
+
