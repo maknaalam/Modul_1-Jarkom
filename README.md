@@ -4,7 +4,7 @@ Name: Makna Alam Pratama <br />
 NRP: 5025241077<br />
 
 
-## Preblem 1
+## Problem 1
 ### How many pockets are recorded in pcapng file?
 Answer: 9596 <br />
 - Look at the footer information where the packets number of the pcapng file shown <br />
@@ -19,12 +19,24 @@ Answer: 8 <br />
 ![1.3](images/1.3.png)<br />
 ### How many packets with pure TCP protocol are recorded in the traffic (without data)?
 Answer: 3223 <br />
-- in filter, type: "tcp.len == 0" (the length of the TCP segment payload that carrys 0 data), which display 3222 packets. In some condition, Wireshark have minor problem by simply excluding 1 packets of data displayed in the number.
+- in filter, type: "tcp.len == 0" (the length of the TCP segment payload that carrys 0 data), which display 3222 packets. In some condition, Wireshark have minor problem by simply excluding 1 packets of data displayed in the number.<br />
 ![1.4](images/1.4.png)<br />
 
+## Problem 2
+### How many packts succeed that are pure TCP based and have [ACK} flag?
+Answer: 3209 <br />
+- in filter, type: "tcp.flags.ack==1&&tcp.len == 0" , which then substracted by the amount of black lined packets and for the same packets that do the same conversation of the black lined packeages is counted as -1 package <br />
+![2.1](images/2.1.png)<br />
+### How many packts succeed that are pure TCP based and have only [ACK} flag?
+Answer: 3172 <br />
+- in filter, type: "tcp.flags.ack==1&&tcp.len == 0&&tcp.flags.syn==0&&tcp.flags.fin==0" (plus does not attempt to start (SYN) and does not attempt to finish (FIN) conditions) , which then substracted by the amount of black lined packets <br />
+![2.2](images/2.2.png)<br />
+### How many packts succeed that are pure TCP based and contain flags other than just [ACK} flag?
+Answer: Jarkom <br />
+- in filter, type: "tcp.flags.ack==1&&tcp.len == 0&&tcp.flags.syn==0&&tcp.flags.fin==0" (packets without payload (header only) with the FIN flag, or packets without payload with the SYN+ACK flags, or packet without payload with the SYN flag (without ACK)) <br />
+![2.3](images/2.3.png)<br />
 
-
-## Preblem 3
+## Problem 3
 ### In what port is the telnet client open?
 Answer: 54184 <br />
 - click any of the packets that has telnet protocol and in the info it says byte of data (which mean rechieve data), then look up the Transmission Control Protocol of that packet to find its port <br />
@@ -42,7 +54,7 @@ Answer: 123 <br />
 - Still in the same TCP stream as number 3.2, try to find a word after "password:" <br />
 ![3.4](images/3.4.png)<br />
 
-## Preblem 4
+## Problem 4
 ### What is the first command that the client wrote on telnet connection?
 Answer: echo <br />
 - Still in the same TCP stream as number 3.2, try to find any command word in programming <br />
@@ -56,7 +68,7 @@ Answer: Jarkom <br />
 - Still in the same TCP stream as number 3.2, try to find a word after "echo" <br />
 ![4.3](images/4.3.png)<br />
 
-## Preblem 5
+## Problem 5
 ### How many HTTP packets are recorded in the pcapng file?
 Answer: 298 <br />
 - in filter, type: "http", then see the displayed packets <br />
@@ -74,7 +86,7 @@ Answer: 172.16.16.101 <br />
 - click any HTTP packets that has the usual client protocol use in the info, like "GET" --> Go to Internet Protocol Version to find the address  <br />
 ![5.4](images/5.4.png)<br />
 
-## Preblem 6
+## Problem 6
 ### Did you find the fake flage?
 Answer: FakeFlag{JarkomGampang} <br />
 - in filter, type: 'frame contains "flag"' (packets where the raw packet data (the entire frame) contains the string "flag"), then right click the HTTP protocol one --> click follow --> TCP/HTTP stream --> find keyword like "FakeFlag" <br />
@@ -84,13 +96,13 @@ Answer: Rey:123 <br />
 - From the TCP/HTTP strem in 6.1 we know that there is no user or password displayed, however there is a passwd.txt file being shared. So by downloading the file, we can know the hidden string that are not fisible in the network <br />
 ![6.2](images/6.2.png)<br />
 
-## Preblem 7
+## Problem 7
 ### What is the image that is being requested by the client?
 Answer: donalbebek.jpg <br />
 - click File menu --> go to export object --> choose http --> search for any extention for image which jpg is one of them <br />
 ![7](images/7.png)<br />
 
-## Preblem 8
+## Problem 8
 ### How many FTP packets are recorded in the pcapng file?
 Answer: 81 <br />
 - in filter, type: "ftp or ftp-data", then see the displayed packets <br />
@@ -104,7 +116,7 @@ Answer: LIST <br />
 - Still in the same TCP stream as 8.2, find any information that provide "transfer" word in it, since it is a sent request. And for the word that come before it should be the command behind it <br />
 ![8.3](images/8.3.png)<br />
 
-## Preblem 9
+## Problem 9
 ### What s the FTP serer IP address?
 Answer: 172.16.16.101 <br />
 - any ftp protocol source address that has the info says "Response: " <br />
@@ -119,7 +131,7 @@ Answer: pokijan.jpg,research_center.jpg <br />
 ![9.3](images/9.3.png)<br />
 
 
-## Preblem 10
+## Problem 10
 ### What is the filename that contains encoded string?
 Answer: secret.txt <br />
 - click File menu --> go to export object --> choose ftp-data and you'll see all the file, which to contain string ususally located in .txt file <br />
