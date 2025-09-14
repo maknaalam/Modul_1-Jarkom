@@ -5,7 +5,7 @@ NRP: 5025241077<br />
 
 
 ## Problem 1
-### How many pockets are recorded in pcapng file?
+### How many packets are recorded in pcapng file?
 Answer: 9596 <br />
 - Look at the footer information where the packets number of the pcapng file shown <br />
 ![1.1](images/1.1.png)<br />
