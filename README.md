@@ -56,7 +56,23 @@ Answer: Jarkom <br />
 - Still in the same TCP stream as number 3.2, try to find a word after "echo" <br />
 ![4.3](images/4.3.png)<br />
 
-
+## Preblem 5
+### How many HTTP packets are recorded in the pcapng file?
+Answer: 298 <br />
+- in filter, type: "http", then see the displayed packets <br />
+![5.1](images/5.1.png)<br />
+### How many response HTTP packets are recorded in the traffic?
+Answer:149 <br />
+- in filter, type: "http.response", then see the displayed packets <br />
+![5.2](images/5.2.png)<br />
+### How many HTTP packets that succeed?
+Answer: 296 <br />
+- in filter, type: "http", then see the displayed packets. In here, we must also count the packets that labeled with color black and red which we don't want to count them. <br />
+![5.3](images/5.3.png)<br />
+### What is the client HTTP address in the connection with other local machine?
+Answer: 172.16.16.101 <br />
+- click any HTTP packets that has the usual client protocol use in the info, like "GET" --> Go to Internet Protocol Version to find the address  <br />
+![5.4](images/5.4.png)<br />
 
 
 
