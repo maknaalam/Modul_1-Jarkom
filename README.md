@@ -117,7 +117,7 @@ Answer: LIST <br />
 ![8.3](images/8.3.png)<br />
 
 ## Problem 9
-### What s the FTP serer IP address?
+### What is the FTP server IP address?
 Answer: 172.16.16.101 <br />
 - any ftp protocol source address that has the info says "Response: " <br />
 ![9.1](images/9.1.png)<br />
