@@ -134,7 +134,7 @@ Answer: pokijan.jpg,research_center.jpg <br />
 ## Problem 10
 ### What is the filename that contains encoded string?
 Answer: secret.txt <br />
-- click File menu --> go to export object --> choose ftp-data and you'll see all the file, which to contain string ususally located in .txt file <br />
+- click File menu --> go to export object --> choose ftp-data and you'll see all the file, which to contain string usually located in .txt file <br />
 ![10.1](images/10.1.png)<br />
 ### What is the filename of the previous file copy?
 Answer: secret1.txt <br />
